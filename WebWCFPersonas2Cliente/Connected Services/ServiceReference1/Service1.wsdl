@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62345/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62345/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62345/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EntityP" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtener" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerid_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_obtenerid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obteneridResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregar_InputMessage">
+    <wsdl:part name="parameters" element="tns:agregar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_agregar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:agregarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editar_InputMessage">
+    <wsdl:part name="parameters" element="tns:editar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_buscar_InputMessage">
+    <wsdl:part name="parameters" element="tns:buscar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_buscar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validar_InputMessage">
+    <wsdl:part name="parameters" element="tns:validar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtener" message="tns:IService1_obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obtenerResponse" message="tns:IService1_obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/obtenerid" message="tns:IService1_obtenerid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/obteneridResponse" message="tns:IService1_obtenerid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="agregar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/agregar" message="tns:IService1_agregar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/agregarResponse" message="tns:IService1_agregar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editar" message="tns:IService1_editar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editarResponse" message="tns:IService1_editar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/eliminar" message="tns:IService1_eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/eliminarResponse" message="tns:IService1_eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buscar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/buscar" message="tns:IService1_buscar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/buscarResponse" message="tns:IService1_buscar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/validar" message="tns:IService1_validar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/validarResponse" message="tns:IService1_validar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obtener">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerid">
+      <soap:operation soapAction="http://tempuri.org/IService1/obtenerid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="agregar">
+      <soap:operation soapAction="http://tempuri.org/IService1/agregar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editar">
+      <soap:operation soapAction="http://tempuri.org/IService1/editar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar">
+      <soap:operation soapAction="http://tempuri.org/IService1/eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscar">
+      <soap:operation soapAction="http://tempuri.org/IService1/buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validar">
+      <soap:operation soapAction="http://tempuri.org/IService1/validar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:62345/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
